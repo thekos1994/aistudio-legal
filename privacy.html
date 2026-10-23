@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AiStudio Privacy Policy</title>
+<meta name="description" content="Privacy Policy of AiStudio, a private tool its two authors use to publish their own videos on their own channels.">
+<style>
+  :root { color-scheme: light dark; --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0; --accent: #0969da; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #3d444d; --accent: #4493f8; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.8em; margin: 0 0 4px; } h2 { font-size: 1.25em; margin-top: 2em; } h3 { font-size: 1.05em; margin-top: 1.5em; }
+  .meta, nav { color: var(--muted); font-size: .95em; } a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+  code { font-size: .92em; overflow-wrap: anywhere; } li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="index.html">AiStudio</a> · <a href="terms.html">Terms of Service</a> · Privacy Policy · <a href="#uk">Українською</a></nav>
+
+<h1>Privacy Policy</h1>
+<p class="meta">AiStudio · Effective date: 23 October 2026</p>
+
+<h2>1. Who we are</h2>
+<p>AiStudio is a private, self-hosted tool used by its two authors to prepare and publish <strong>their own</strong> videos on <strong>their own</strong> TikTok, YouTube and Instagram accounts. It is not a public service: nobody else can sign up, and it runs only on the authors' home server, reachable from their home network and a private network (VPN). The only people whose platform data AiStudio handles are the two authors themselves.</p>
+
+<h2>2. What data we receive</h2>
+<p>We request only the permissions needed to publish our own videos and to see how they perform. We do not request access to messages, contacts, followers' personal data, or other people's content.</p>
+
+<h3>TikTok (Login Kit and Content Posting API)</h3>
+<ul>
+  <li>Permissions (scopes): <code>user.info.basic</code>, <code>video.publish</code>, <code>video.upload</code>.</li>
+  <li>Data received: access token and refresh token; account identifier (<code>open_id</code>), display name, username and avatar URL — to show which account is connected and to build the link to the published video.</li>
+  <li>When publishing: the creator settings TikTok returns for the account (allowed privacy levels, whether comments/duet/stitch are disabled) and the publishing status and post ID of our own video.</li>
+  <li>We do not read TikTok video statistics, comments, followers or any other users' data.</li>
+</ul>
+
+<h3>YouTube (Google OAuth, YouTube Data API, YouTube Analytics API)</h3>
+<ul>
+  <li>Permissions (scopes): <code>youtube.readonly</code>, <code>yt-analytics.readonly</code>, <code>yt-analytics-monetary.readonly</code>, <code>youtube.upload</code>, <code>youtube.force-ssl</code>.</li>
+  <li>Data received: OAuth refresh token (and short-lived access tokens); our channel's ID, title, thumbnail and public statistics (subscribers, views, video count).</li>
+  <li>Analytics of our own channel: daily views, watch time, subscribers gained/lost, per-video and per-country totals and, if the channel is monetized, estimated revenue — aggregated numbers only, no personal data of viewers.</li>
+  <li>Used for publishing our own videos: uploading the video and its thumbnail, captions, titles and descriptions in other languages, scheduled publication time.</li>
+</ul>
+
+<h3>Instagram (Facebook Login, Instagram Graph API)</h3>
+<ul>
+  <li>Permissions: <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>business_management</code>.</li>
+  <li>Data received: the access token of the Facebook Page linked to our professional Instagram account; Page ID and name; Instagram account ID, username, profile picture URL and follower count.</li>
+  <li>When publishing: the processing status and permalink of our own Reel.</li>
+</ul>
+
+<h2>3. How we use the data</h2>
+<ul>
+  <li>To publish our own videos to our own accounts at the time we choose, and to show us the link and status of each publication.</li>
+  <li>To show us statistics of our own YouTube channel.</li>
+</ul>
+<p>We do not use the data for advertising, profiling, selling, training AI models, or any purpose other than the above.</p>
+
+<h2>4. Where the data is stored</h2>
+<ul>
+  <li>All data is stored only on the authors' home server (a NAS at home). There is no cloud database and no third-party storage.</li>
+  <li>Access and refresh tokens are kept in a separate keys folder readable only by the AiStudio service (file permissions 600) and are not included in data backups.</li>
+  <li>The server is not accessible from the public internet; it is reachable only from the home network and the authors' private VPN.</li>
+</ul>
+
+<h2>5. Sharing</h2>
+<p>We do not sell, rent or share this data with anyone. Data is sent only back to the platform it came from (for example, a TikTok token is sent only to TikTok's API) when we publish a video or refresh the token.</p>
+
+<h2>6. Retention</h2>
+<p>Tokens and account details are kept while the account is connected to AiStudio. When an account is disconnected, AiStudio revokes the token with the platform where the platform supports it (TikTok, Google) and deletes the stored token and account record immediately. Cached statistics are deleted on request (see below) within 30 days.</p>
+
+<h2 id="data-deletion">7. How to revoke access and delete your data</h2>
+<ul>
+  <li><strong>In AiStudio:</strong> “Channels &amp; statistics” → the connected account → “Disconnect”. This revokes the token and deletes the stored token and account record.</li>
+  <li><strong>TikTok:</strong> TikTok app → Profile → Settings and privacy → Security &amp; permissions → Apps and services permissions → AiStudio → Remove access.</li>
+  <li><strong>Google / YouTube:</strong> <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> → AiStudio → Remove access.</li>
+  <li><strong>Facebook / Instagram:</strong> Facebook → Settings &amp; privacy → Settings → Business integrations (or Apps and websites) → AiStudio → Remove.</li>
+  <li><strong>Request deletion:</strong> write to <a href="mailto:kk.familycreaters@gmail.com">kk.familycreaters@gmail.com</a> with the subject “Delete my data”. We will delete all data related to your account, including cached statistics, within 30 days and confirm by email.</li>
+</ul>
+
+<h2>8. Platform policies</h2>
+<p>AiStudio uses YouTube API Services. By using YouTube features you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>; Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. AiStudio's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. TikTok's and Meta's own handling of data is described in the <a href="https://www.tiktok.com/legal/privacy-policy">TikTok Privacy Policy</a> and the <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</p>
+
+<h2>9. Children</h2>
+<p>AiStudio is used only by its two adult authors and does not collect data from children.</p>
+
+<h2>10. Changes</h2>
+<p>If this policy changes, we will update this page and its effective date.</p>
+
+<h2>11. Contact</h2>
+<p><a href="mailto:kk.familycreaters@gmail.com">kk.familycreaters@gmail.com</a></p>
+
+<hr>
+
+<section id="uk" lang="uk">
+<h1>Політика конфіденційності</h1>
+<p class="meta">AiStudio · Чинна з 23 жовтня 2026 року · Переклад українською (у разі розбіжностей переважає англійський текст)</p>
+
+<h2>1. Хто ми</h2>
+<p>AiStudio — приватний інструмент на власному сервері, яким двоє його авторів готують і публікують <strong>власні</strong> відео на <strong>власних</strong> акаунтах TikTok, YouTube та Instagram. Це не публічний сервіс: ніхто інший не може зареєструватися, а працює він лише на домашньому сервері авторів, доступному з домашньої мережі та приватної мережі (VPN). Єдині люди, чиї дані з платформ обробляє AiStudio, — самі автори.</p>
+
+<h2>2. Які дані ми отримуємо</h2>
+<p>Ми просимо лише дозволи, потрібні, щоб публікувати власні відео й бачити, як вони переглядаються. Ми не просимо доступу до повідомлень, контактів, особистих даних підписників чи чужого контенту.</p>
+
+<h3>TikTok (Login Kit і Content Posting API)</h3>
+<ul>
+  <li>Дозволи: <code>user.info.basic</code>, <code>video.publish</code>, <code>video.upload</code>.</li>
+  <li>Отримуємо: токен доступу й токен оновлення; ідентифікатор акаунта (<code>open_id</code>), показуване ім'я, ім'я користувача й адресу аватара — щоб показати, який акаунт підключено, і скласти посилання на опубліковане відео.</li>
+  <li>Під час публікації: налаштування автора, які повертає TikTok (дозволені рівні приватності, чи вимкнено коментарі/дуети/зшивки), а також стан публікації й ідентифікатор нашого відео.</li>
+  <li>Ми не читаємо статистику відео TikTok, коментарі, підписників чи дані інших користувачів.</li>
+</ul>
+
+<h3>YouTube (вхід Google, YouTube Data API, YouTube Analytics API)</h3>
+<ul>
+  <li>Дозволи: <code>youtube.readonly</code>, <code>yt-analytics.readonly</code>, <code>yt-analytics-monetary.readonly</code>, <code>youtube.upload</code>, <code>youtube.force-ssl</code>.</li>
+  <li>Отримуємо: токен оновлення (і короткочасні токени доступу); ідентифікатор, назву, значок і публічну статистику нашого каналу (підписники, перегляди, кількість відео).</li>
+  <li>Аналітика власного каналу: перегляди за днями, час перегляду, нові й утрачені підписники, підсумки за відео й країнами та, якщо канал монетизований, орієнтовний дохід — лише зведені числа, без особистих даних глядачів.</li>
+  <li>Для публікації власних відео: завантаження відео й обкладинки, субтитри, назви й описи іншими мовами, час відкладеної публікації.</li>
+</ul>
+
+<h3>Instagram (вхід Facebook, Instagram Graph API)</h3>
+<ul>
+  <li>Дозволи: <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>, <code>business_management</code>.</li>
+  <li>Отримуємо: токен доступу сторінки Facebook, прив'язаної до нашого професійного акаунта Instagram; ідентифікатор і назву сторінки; ідентифікатор, ім'я користувача, адресу фото профілю й кількість підписників акаунта Instagram.</li>
+  <li>Під час публікації: стан обробки й постійне посилання нашого Reels.</li>
+</ul>
+
+<h2>3. Як ми використовуємо дані</h2>
+<ul>
+  <li>Щоб публікувати власні відео на власних акаунтах у вибраний нами час і бачити посилання та стан кожної публікації.</li>
+  <li>Щоб бачити статистику власного каналу YouTube.</li>
+</ul>
+<p>Ми не використовуємо дані для реклами, профілювання, продажу, навчання моделей ШІ чи будь-чого іншого.</p>
+
+<h2>4. Де зберігаються дані</h2>
+<ul>
+  <li>Усі дані зберігаються лише на домашньому сервері авторів (NAS удома). Хмарної бази даних і сторонніх сховищ немає.</li>
+  <li>Токени доступу й оновлення лежать в окремій теці ключів, яку може читати лише служба AiStudio (права файлів 600), і не потрапляють у резервні копії даних.</li>
+  <li>Сервер недоступний з публічного інтернету — лише з домашньої мережі та приватної VPN авторів.</li>
+</ul>
+
+<h2>5. Передавання</h2>
+<p>Ми не продаємо, не здаємо в оренду й нікому не передаємо ці дані. Дані надсилаються лише назад тій платформі, від якої отримані (наприклад, токен TikTok — лише до API TikTok), коли ми публікуємо відео або оновлюємо токен.</p>
+
+<h2>6. Строк зберігання</h2>
+<p>Токени й дані акаунта зберігаються, поки акаунт підключено до AiStudio. Коли акаунт відключають, AiStudio відкликає токен у платформи, де платформа це підтримує (TikTok, Google), і одразу видаляє збережений токен і запис акаунта. Збережену статистику видаляємо на запит (див. нижче) протягом 30 днів.</p>
+
+<h2 id="vydalennia-danykh">7. Як відкликати доступ і видалити дані</h2>
+<ul>
+  <li><strong>В AiStudio:</strong> «Канали й статистика» → підключений акаунт → «Відключити». Токен відкликається, збережений токен і запис акаунта видаляються.</li>
+  <li><strong>TikTok:</strong> застосунок TikTok → Профіль → Налаштування й конфіденційність → Безпека й дозволи → Дозволи застосунків і сервісів → AiStudio → Скасувати доступ.</li>
+  <li><strong>Google / YouTube:</strong> <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> → AiStudio → Скасувати доступ.</li>
+  <li><strong>Facebook / Instagram:</strong> Facebook → Налаштування й конфіденційність → Налаштування → Бізнес-інтеграції (або «Застосунки й вебсайти») → AiStudio → Видалити.</li>
+  <li><strong>Запит на видалення:</strong> напишіть на <a href="mailto:kk.familycreaters@gmail.com">kk.familycreaters@gmail.com</a> з темою «Delete my data». Ми видалимо всі дані, пов'язані з вашим акаунтом (зокрема збережену статистику), протягом 30 днів і підтвердимо листом.</li>
+</ul>
+
+<h2>8. Правила платформ</h2>
+<p>AiStudio використовує YouTube API Services. Користуючись функціями YouTube, ви погоджуєтеся з <a href="https://www.youtube.com/t/terms">Умовами використання YouTube</a>; як Google поводиться з даними, описано в <a href="https://policies.google.com/privacy">Політиці конфіденційності Google</a>. Використання AiStudio інформації, отриманої з API Google, відповідає <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, зокрема вимогам Limited Use. Як дані обробляють TikTok і Meta, описано в <a href="https://www.tiktok.com/legal/privacy-policy">Політиці конфіденційності TikTok</a> і <a href="https://www.facebook.com/privacy/policy/">Політиці конфіденційності Meta</a>.</p>
+
+<h2>9. Діти</h2>
+<p>AiStudio користуються лише двоє дорослих авторів; дані дітей він не збирає.</p>
+
+<h2>10. Зміни</h2>
+<p>Якщо політика зміниться, ми оновимо цю сторінку й дату, з якої вона чинна.</p>
+
+<h2>11. Контакт</h2>
+<p><a href="mailto:kk.familycreaters@gmail.com">kk.familycreaters@gmail.com</a></p>
+</section>
+</main>
+</body>
+</html>
